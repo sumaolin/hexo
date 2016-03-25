@@ -123,3 +123,20 @@ where ssh // 查看当前的ssh 的路径
 ## 4. hexo博客参考链接
 
   1. [hexo你的博客](http://ibruce.info/2013/11/22/hexo-your-blog/) 博客的主题也挺喜欢的
+
+
+# 20160325 更新
+
+## features
+  1. github & coding.net 一键同时部署（coding.net 通过webhook 自动部署)，国内国外区分访问
+
+
+## 参考链接
+
+  1. [在 Coding 上搭建 Hexo 个人博客！](https://segmentfault.com/a/1190000002900848)
+
+      关于webhook 的自动部署 说的很明白
+
+  2. [hexo干货系列：（四）将hexo博客同时托管到github和coding](http://www.jianshu.com/p/7ad9d3cd4d6e)
+
+      关于 deplay github & coding.net 的写法 ，国内国外区分访问

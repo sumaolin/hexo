@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Kevin.Su's Blog
-subtitle: 苏茂林个人博客
-description: 苏茂林个人博客, 关于前端技术的的杂记！
+title: 苏茂林
+subtitle: Kevin.Su's Blog
+description: 苏茂林, 个人博客, Kevin.Su's Blog, 关于前端技术的的杂记！
 author: Kevin Su
 language: zh-Hans
 timezone:
@@ -68,7 +68,6 @@ plugins: hexo-generator-feed
 theme: next
 avatar: http://tp4.sinaimg.cn/1765384767/180/5749265416/1
 duoshuo_shortname: sumaolin
-swiftype_key: eXMQ7T4xPtohoit7c7dh
 baidu_analytics: 154101e86ea67b8b420e04051c6e0b2a
 
 
@@ -77,7 +76,8 @@ baidu_analytics: 154101e86ea67b8b420e04051c6e0b2a
 deploy:
   type: git
   repo:
-    github: git@github.com:sumaolin/sumaolin.github.com.git
+    github: git@github.com:sumaolin/sumaolin.github.com.git,master
+    coding: git@git.coding.net:sumaolin/blog.git,master
 
 
 server:

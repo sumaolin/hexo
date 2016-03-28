@@ -140,3 +140,13 @@ where ssh // 查看当前的ssh 的路径
   2. [hexo干货系列：（四）将hexo博客同时托管到github和coding](http://www.jianshu.com/p/7ad9d3cd4d6e)
 
       关于 deplay github & coding.net 的写法 ，国内国外区分访问
+
+# 20160328 更新
+
+  迁移到coding.net 后，对与国内的的线路一直无法访问，一直以为修改DNS服务商后 没有生效，所以等48小时后的今天访问，还是不生效，感觉是自己配置的问题了，由于先参考了[在 Coding 上搭建 Hexo 个人博客！](https://segmentfault.com/a/1190000002900848), 潜意识的 以为只能通过 coding.net 的 演示功能部署呢，今天找问题时候发现，coding.net 的 pages 功能，还可以免费绑定域名（演示平台需要会员才可以绑定域名），所以新建了个个人博客的项目，改_config.yml 直接部署到该项目，把cname 解析到sumaolin.coding.me 而不是 sumaolin.coding.io （演示功能用到的域名），几秒后可以访问了！
+
+其实 [hexo干货系列：（四）将hexo博客同时托管到github和coding](http://www.jianshu.com/p/7ad9d3cd4d6e) 提到过 coding.net 两种部署方式的：
+
+  > 部署博客方式有两种，第一种就是pages服务的方式，也推荐这种方式，因为可以绑定域名，而第二种演示的方式必须升级会员才能绑定自定义域名。pages方式也很简单就是在source/需要创建一个空白文件，至于原因，是因为 coding.net需要这个文件来作为以静态文件部署的标志。就是说看到这个Staticfile就知道按照静态文件来发布。
+
+以后看资料要仔细了，自己的坑自己踩啊！另外pages 部署的时候不用 创建空白文件Staticfile 也可以！

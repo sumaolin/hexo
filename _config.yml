@@ -77,7 +77,7 @@ deploy:
   type: git
   repo:
     github: git@github.com:sumaolin/sumaolin.github.com.git,master
-    coding: git@git.coding.net:sumaolin/blog.git,master
+    coding: git@git.coding.net:sumaolin/sumaolin.git,coding-pages
 
 
 server:

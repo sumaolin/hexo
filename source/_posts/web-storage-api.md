@@ -22,11 +22,19 @@ categories: F2E
 
   4. [使用 SRI 增强 localStorage 代码安全](https://imququ.com/post/enhance-security-for-ls-code.html)
 
-  5. [Web移动端使用localStorage缓存Js和css文件](http://blog.csdn.net/a497785609/article/details/48321405)   ** 推荐 **
+  5. [Web移动端使用localStorage缓存Js和css文件](http://blog.csdn.net/a497785609/article/details/48321405)   _
+_
+ 推荐 _
+_
+
 
   6. [基于 postMessage 和 localStorage 的跨域本地存储方案](http://www.w3ctech.com/topic/284)
 
-  7. [【译】在本地存储中保存图片和文件](http://www.w3ctech.com/topic/767)   ** 推荐 **
+  7. [【译】在本地存储中保存图片和文件](http://www.w3ctech.com/topic/767)   _
+_
+ 推荐 _
+_
+
 
   8. [基于 postMessage 和 localStorage 的跨域本地存储方案](http://www.w3ctech.com/topic/284)
 
@@ -45,6 +53,9 @@ categories: F2E
 
   1. localStorage 本地存储 的require('js') 模式的调用
 
+##### 20160401 更新
+  1. [“高三”笔记之动态JS、动态样式](http://www.famanoder.com/bokes/56fd271ad20b0ffc34ae5983)
+
 ## 关于 application manifest
 
   1. [manifest 和 application cache](http://www.cnblogs.com/_franky/archive/2012/11/23/2783947.html)
@@ -52,6 +63,13 @@ categories: F2E
   2. [HTML5 离线存储实战之manifest（附缓存整个文件夹的方法）](http://www.jnecw.com/p/490)
 
   3. [MDN 使用应用缓存](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Using_the_application_cache) 够详尽！
+
+
+##### 2016-04-18
+
+  1. [手机百度localstorage细粒度缓存介绍](http://js8.in/2015/12/06/%E6%89%8B%E6%9C%BA%E7%99%BE%E5%BA%A6localstorage%E7%BB%86%E7%B2%92%E5%BA%A6%E7%BC%93%E5%AD%98%E4%BB%8B%E7%BB%8D/)
+
+  2. [手机百度前端工程化之路](http://js8.in/2014/05/28/%E6%89%8B%E6%9C%BA%E7%99%BE%E5%BA%A6%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B9%8B%E8%B7%AF/)
 
 ### 疑问
 ##### 1. application cache 数据量的大小？
@@ -72,9 +90,17 @@ categories: F2E
 
     各种浏览器的的 数据量的大小是不一样的。查看 html5 [Application cache API 官方的文件](https://www.w3.org/TR/2011/WD-html5-20110405/offline.html#disk-space)，也是支持各个浏览器自己定义的 允许的disk space 大小，甚至允许用户管理。
 
-  ** 最终的方案 ：通用的application cache disk space 限制在5M **
+  _
+_
+ 最终的方案 ：通用的application cache disk space 限制在5M _
+_
 
-  ** tip: ** [chrome://appcache-internals/](chrome://appcache-internals/) 可以查看chorme 中 application cache 的使用大小，亲自证实不止 5M
+
+  _
+_
+ tip: _
+_
+ [chrome://appcache-internals/](chrome://appcache-internals/) 可以查看chorme 中 application cache 的使用大小，亲自证实不止 5M
 
 
 ##### 2. 想缓存的文件太多了，手写很麻烦，怎么办呢？
@@ -129,9 +155,11 @@ categories: F2E
 
   >  2. 明示项和备用项优先级高于白名单.
 
-  >  3. 白名单使用通配符"*". 则会进入白名单的open状态. 这种状态下.所有不在相关Cache区域出现的url都默认使用HTTP相关缓存头策略.
+  >  3. 白名单使用通配符"_
+". 则会进入白名单的open状态. 这种状态下.所有不在相关Cache区域出现的url都默认使用HTTP相关缓存头策略.
 
-  >  4. 白名单使用具体的前缀匹配或更具体的URL,则都属于blocking状态.这种状态下,白名单所匹配的,非Cache区域出现的URL,与open的*匹配的结果一致,但是不在白名单中,又不在整个manifest的资源,会block.也就是访问，加载不能.
+  >  4. 白名单使用具体的前缀匹配或更具体的URL,则都属于blocking状态.这种状态下,白名单所匹配的,非Cache区域出现的URL,与open的_
+匹配的结果一致,但是不在白名单中,又不在整个manifest的资源,会block.也就是访问，加载不能.
 
 
 ## 阅读列表 [2015.02.22 - 2015.02.28]

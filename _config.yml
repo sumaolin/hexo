@@ -62,7 +62,28 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-plugins: hexo-generator-feed
+plugins: 
+  - hexo-qiniu-syn
+qiniu:
+  offline: false
+  sync: true
+  bucket: sumaolin
+  # access_key: hpuB89Wsfc2l8zgx-6A5-P5xI-l0cYWE19KpPdX-
+  # secret_key: Hd1XwcNuwwNsN0ADxjGrIDk6INcY_EEuMUXMBzvb
+  secret_file: ./sec/qn.json
+  dirPrefix: static
+  urlPrefix: http://sumaolin.reekly.com/static
+  up_host: http://upload.qiniu.com
+  local_dir: static
+  update_exist: true
+  image: 
+    folder: img
+    extend: 
+  js:
+    folder: js
+  css:
+    folder: css
+
 
 ## Themes: https://hexo.io/themes/
 theme: next

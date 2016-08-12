@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 plugins: 
-  - hexo-qiniu-syn
+  - hexo-qiniu-sync
 qiniu:
   offline: false
   sync: true

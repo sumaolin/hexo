@@ -251,3 +251,7 @@ SyntaxError: Unexpected token a
 这样就完美了 每次 qnimg Tab下就可以了
 
 发现个美中不足的地方： [qiniu 中开启了防盗链白名单功能，所以本地hexo s时无法实时预览图片？](https://github.com/gyk001/hexo-qiniu-sync/issues/39) 期望有解决方法
+
+### 2016-08-12 根据作者的介绍使用 `offline:true`配置可以开启 本地调用功能的，并且更新到 V 1.4.5版本解决了软连的问题
+
+更新的时候hexo v3.2.2 更新后 没有了hexo server 选项了，这也没法开启offline:true 验证了，hexo官方确认是个windows下的bug

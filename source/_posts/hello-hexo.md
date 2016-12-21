@@ -255,3 +255,97 @@ SyntaxError: Unexpected token a
 ### 2016-08-12 根据作者的介绍使用 `offline:true`配置可以开启 本地调用功能的，并且更新到 V 1.4.5版本解决了软连的问题
 
 更新的时候hexo v3.2.2 更新后 没有了hexo server 选项了，这也没法开启offline:true 验证了，hexo官方确认是个windows下的bug
+
+
+### 2016-12-21
+
+有时间了，再折腾下上次遗留的问题： `hexo-qiniu-sync插件配置好后 hexo server 无法启动了`
+
+  1.  上次冲洗hexo init 个blog 是有hexo server 命令的，所以肯定了这个是插件引起的问题
+
+  2.  在配置_config.yml中去掉了关于 hexo-qiniu-sync 的配置
+
+```bash
+λ hexo server
+ERROR Plugin load failed: hexo-qiniu-sync
+TypeError: Cannot read property 'secret_file' of undefined
+    at Object.<anonymous> (F:\nodeDev\hexo\node_modules\hexo-qiniu-sync\config.js:8:21)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Module.require (module.js:353:17)
+    at require (F:\nodeDev\hexo\node_modules\hexo\lib\hexo\index.js:213:21)
+    at F:\nodeDev\hexo\node_modules\hexo-qiniu-sync\index.js:9:14
+    at F:\nodeDev\hexo\node_modules\hexo\lib\hexo\index.js:229:12
+    at tryCatcher (F:\nodeDev\hexo\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:510:31)
+    at Promise._settlePromise (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:567:18)
+    at Promise._settlePromise0 (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:612:10)
+    at Promise._settlePromises (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:691:18)
+    at Promise._fulfill (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:636:18)
+    at Promise._resolveCallback (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:431:57)
+    at Promise._settlePromiseFromHandler (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:522:17)
+    at Promise._settlePromise (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:567:18)
+    at Promise._settlePromise0 (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:612:10)
+    at Promise._settlePromises (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:691:18)
+    at Promise._fulfill (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:636:18)
+    at F:\nodeDev\hexo\node_modules\bluebird\js\release\nodeback.js:42:21
+INFO  Start processing
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Template render error: (unknown path) [Line 91, Column 2]
+  unknown block tag: qnimg
+    at Object.exports.prettifyError (F:\nodeDev\hexo\node_modules\nunjucks\src\lib.js:34:15)
+    at Obj.extend.render (F:\nodeDev\hexo\node_modules\nunjucks\src\environment.js:469:27)
+    at Obj.extend.renderString (F:\nodeDev\hexo\node_modules\nunjucks\src\environment.js:327:21)
+    at F:\nodeDev\hexo\node_modules\hexo\lib\extend\tag.js:66:9
+    at Promise._execute (F:\nodeDev\hexo\node_modules\bluebird\js\release\debuggability.js:299:9)
+    at Promise._resolveFromExecutor (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:481:18)
+    at new Promise (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:77:14)
+    at Tag.render (F:\nodeDev\hexo\node_modules\hexo\lib\extend\tag.js:64:10)
+    at Object.tagFilter [as onRenderEnd] (F:\nodeDev\hexo\node_modules\hexo\lib\hexo\post.js:253:16)
+    at F:\nodeDev\hexo\node_modules\hexo\lib\hexo\render.js:65:19
+    at tryCatcher (F:\nodeDev\hexo\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:510:31)
+    at Promise._settlePromise (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:567:18)
+    at Promise._settlePromise0 (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:612:10)
+    at Promise._settlePromises (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:691:18)
+    at Async._drainQueue (F:\nodeDev\hexo\node_modules\bluebird\js\release\async.js:138:16)
+    at Async._drainQueues (F:\nodeDev\hexo\node_modules\bluebird\js\release\async.js:148:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (F:\nodeDev\hexo\node_modules\bluebird\js\release\async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+FATAL (unknown path) [Line 91, Column 2]
+  unknown block tag: qnimg
+Template render error: (unknown path) [Line 91, Column 2]
+  unknown block tag: qnimg
+    at Object.exports.prettifyError (F:\nodeDev\hexo\node_modules\nunjucks\src\lib.js:34:15)
+    at Obj.extend.render (F:\nodeDev\hexo\node_modules\nunjucks\src\environment.js:469:27)
+    at Obj.extend.renderString (F:\nodeDev\hexo\node_modules\nunjucks\src\environment.js:327:21)
+    at F:\nodeDev\hexo\node_modules\hexo\lib\extend\tag.js:66:9
+    at Promise._execute (F:\nodeDev\hexo\node_modules\bluebird\js\release\debuggability.js:299:9)
+    at Promise._resolveFromExecutor (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:481:18)
+    at new Promise (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:77:14)
+    at Tag.render (F:\nodeDev\hexo\node_modules\hexo\lib\extend\tag.js:64:10)
+    at Object.tagFilter [as onRenderEnd] (F:\nodeDev\hexo\node_modules\hexo\lib\hexo\post.js:253:16)
+    at F:\nodeDev\hexo\node_modules\hexo\lib\hexo\render.js:65:19
+    at tryCatcher (F:\nodeDev\hexo\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:510:31)
+    at Promise._settlePromise (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:567:18)
+    at Promise._settlePromise0 (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:612:10)
+    at Promise._settlePromises (F:\nodeDev\hexo\node_modules\bluebird\js\release\promise.js:691:18)
+    at Async._drainQueue (F:\nodeDev\hexo\node_modules\bluebird\js\release\async.js:138:16)
+    at Async._drainQueues (F:\nodeDev\hexo\node_modules\bluebird\js\release\async.js:148:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (F:\nodeDev\hexo\node_modules\bluebird\js\release\async.js:17:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+
+```
+
+  看来是安装了 hexo-qiniu-sync 插件的问题
+
+搜索了下相关问题，找到了条有价值的信息: [Hexo 七牛云同步插件的使用](http://mp.weixin.qq.com/s?__biz=MzIzNzEzNDMxOA==&idx=1&mid=2651006828&sn=c553c202b1162f6bd37d87a41a8a961d)
+
+> 基本的安装、配置在插件主页也有过说明，按照配置即可，这里记录下遇到的坑。注意在_config.yml 中不要配置插件栏如下，否则会报错找不到 hexo server 的命令，可参考问题: https://github.com/gyk001/hexo-qiniu-sync/issues/41
+
+原来官方已经解决了，按照提示注释掉 插件就可以了，再来个测试OK
+
+{% qnimg 202326.png title:考辛斯 alt:考辛斯 %}

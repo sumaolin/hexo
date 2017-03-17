@@ -349,3 +349,6 @@ Template render error: (unknown path) [Line 91, Column 2]
 原来官方已经解决了，按照提示注释掉 插件就可以了，再来个测试OK
 
 {% qnimg 202326.png title:考辛斯 alt:考辛斯 %}
+
+#### 发现刚才测试的 考辛斯的图片并没有同步到七牛 ，并且 deploy 后连接还是原来的域名下的
+

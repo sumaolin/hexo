@@ -13,6 +13,69 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElemen
 mixpanel.init("8cad7aab113488a3d7e96b939f5b5add");
 </script>
 <!-- end Mixpanel -->
+{% if is_category() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 分类页'
+    });
+    </script>
+  {% elif is_tag() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 标签页'
+    });
+    </script>
+  {% elif is_home() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 首页'
+    });
+    </script>
+  {% elif is_post() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 详情页'
+    });
+    </script>
+  {% elif is_archive() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 归档页'
+    });
+    </script>{% elif is_home() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 首页'
+    });
+    </script>
+  {% else %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 未知页'
+    });
+    </script>
+{% endif %}
 
 {# #238, Disable Baidu tranformation #}
 <meta http-equiv="Cache-Control" content="no-transform" />

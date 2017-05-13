@@ -352,3 +352,9 @@ Template render error: (unknown path) [Line 91, Column 2]
 
 #### 发现刚才测试的 考辛斯的图片并没有同步到七牛 ，并且 deploy 后连接还是原来的域名下的
 
+## 2017-05-13
+
+ 终于完成了这个 hexo-qiniu-sync  插件的调试，可以痛快的使用了
+
+下面在弄个自己的[hexo-theme](/2017/05/13/hexo-theme/)
+

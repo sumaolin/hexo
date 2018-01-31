@@ -63,9 +63,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 plugins: 
-  - hexo-qiniu-sync
+# - hexo-qiniu-sync
 qiniu:
-  offline: false
+  offline: true
   sync: true
   bucket: sumaolin
   # access_key: hpuB89Wsfc2l8zgx-6A5-P5xI-l0cYWE19KpPdX-

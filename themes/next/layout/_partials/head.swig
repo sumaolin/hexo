@@ -4,7 +4,78 @@
 
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="baidu-site-verification" content="aH9Bnk1gKE" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<!-- start Mixpanel -->
+<script type="text/javascript">
+(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"http://datalink.kmsocial.cn/mixpanel.min.js".match(/^\/\//)?"https:http://datalink.kmsocial.cn/mixpanel.min.js":"http://datalink.kmsocial.cn/mixpanel.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("8cad7aab113488a3d7e96b939f5b5add");
+</script>
+<!-- end Mixpanel -->
+{% if is_category() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 分类页'
+    });
+    </script>
+  {% elif is_tag() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 标签页'
+    });
+    </script>
+  {% elif is_home() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 首页'
+    });
+    </script>
+  {% elif is_post() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 详情页'
+    });
+    </script>
+  {% elif is_archive() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 归档页'
+    });
+    </script>{% elif is_home() %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 首页'
+    });
+    </script>
+  {% else %}
+    <script type="text/javascript">
+    mixpanel.register({
+        'uid': 'lilihuan@kmsocial.com',
+        'srcuid': 'lihuixi@kmsocial.com',
+        'platform': 'weixin',
+        'urlid': '苏茂林博客 未知页'
+    });
+    </script>
+{% endif %}
 
 {# #238, Disable Baidu tranformation #}
 <meta http-equiv="Cache-Control" content="no-transform" />

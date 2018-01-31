@@ -255,3 +255,9 @@ SyntaxError: Unexpected token a
 ### 2016-08-12 根据作者的介绍使用 `offline:true`配置可以开启 本地调用功能的，并且更新到 V 1.4.5版本解决了软连的问题
 
 更新的时候hexo v3.2.2 更新后 没有了hexo server 选项了，这也没法开启offline:true 验证了，hexo官方确认是个windows下的bug
+
+## 2016-09-27
+
+  1. 前几天测试过从新 `hexo init` 个新项目的话 是有 `hexo server` 命令并且能够运行的，看来是 hexo-qiniu-sync 插件出问题了。有时间修复下
+
+  2. 自动部署的问题 看到了个更简洁的: [手把手教你使用Travis CI自动部署你的Hexo博客到Github上](http://i.woblog.cn/2016/05/04/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E5%88%B0Github%E4%B8%8A/#more)

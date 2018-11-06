@@ -12,19 +12,20 @@ categories: node
 
 <!--more-->
 
-## 1. 基本的安装
+## 基本的安装
 
 (懒癌发作!)都是做开发的不一步步讲解了，直接上参考链接吧：
 
-1. [使用hexo搭建博客](http://yangjian.me/workspace/building-blog-with-hexo/)
+1. [使用hexo搭建博客](http://yangjian.me/workspace/building-blog-with-hexo/)  **无效了无奈** 
 
-#### 遇到的问题
 
-##### 1. 默认安装的本地调试地址是 0.0.0.0:4000 怎么调试都无效，
-  _
-解决办法_
+
+### 本地调试地址端口无效
+#### 解决办法
+
  搜索参考网上的说是端口占用了 把ip地址改为常用的127.0.0.1:4000就OK了
-  修改方法：直接找到node_modules/ hexo-serve/index.js
+ 修改方法：直接找到`node_modules/ hexo-serve/index.js`
+
   ``` Javascript
   hexo.config.server = assign({
     log: false,
@@ -32,10 +33,7 @@ categories: node
   }, hexo.config.server);
   ```
 
-_
-_
-2016.02.22 更新 _
-_
+#### 2016.02.22 更新
 
   参考了 [hexo-server](https://github.com/hexojs/hexo-server), 本地服务的IP ，和port 可以在启动参数中配置的
 
@@ -47,26 +45,28 @@ _
     ip: 127.0.0.1
     compress: false
     header: true
-```
-## 2. 主题安装 themes
+  ```
+
+
+### 主题安装 themes
 
 喜欢的主题 [hexo-theme-next](https://github.com/iissnan/hexo-theme-next)，使用文档很详细：[文档地址](http://theme-next.iissnan.com/),不废话了！
 
 喜欢的主题列表
-> 1. [hexo-theme-modernist](https://github.com/heroicyang/hexo-theme-modernist)
-> 2. [hexo-theme-next](https://github.com/iissnan/hexo-theme-next)
+1. [hexo-theme-modernist](https://github.com/heroicyang/hexo-theme-modernist) 
+2. [hexo-theme-next](https://github.com/iissnan/hexo-theme-next) 
 
 #### 评论
 
-[多说](http://duoshuo.com/)
+[多说](http://duoshuo.com/) 
 
 #### 统计
 
-[百度统计](http://sitecenter.baidu.com/sc-web/)
+[百度统计](http://sitecenter.baidu.com/sc-web/) 
 
 #### 搜索
 
-[Swiftype](https://swiftype.com/)
+[Swiftype](https://swiftype.com/) 
 
 #### 文章摘要
 
@@ -76,13 +76,17 @@ _
 以下是全文
 ```
 
-## 部署
 
-上面都是配置问题，本地没有问题的，终究要部署到github.com 上的，那么问题来了
+
+## 部署上线
+
+### Question
+
+上面都是配置问题，本地没有问题的，终究要部署到`github.com` 上的，那么问题来了
 
 部署上去 无法访问，我是在git的根目录下有新建了个blog 目录，因为原来的git 下有东西了
 
-#### 1. 怀疑是自己的git root 下面已经有东西了，在子目录blog 下影响的，把git remote 改为新的地址：git@github.com:sumaolin/hexo.git
+怀疑是自己的git root 下面已经有东西了，在子目录blog 下影响的，把git remote 改为新的地址：git@github.com:sumaolin/hexo.git
 
 可是hexo deploy 还是报错
 
@@ -92,17 +96,23 @@ _
 Permission denied (publickey).
 fatal: Could not read from remote repository.
 ```
-搜索相关的 `git Permission denied' 的问题
+搜索相关的 `git Permission denied`的问题
 
-#### 参考：
-1. [由于SSH配置文件的不匹配，导致的Permission denied (publickey)及其解决方法 ](http://blog.itpub.net/25851087/viewspace-1262468/)
-2. [Github 访问时出现Permission denied (public key)](http://my.oschina.net/grnick/blog/201155)
-3. [Git with SSH on Windows](http://stackoverflow.com/questions/2499331/git-with-ssh-on-windows)
-4. [Git - Permission denied (publickey)](http://stackoverflow.com/questions/2643502/git-permission-denied-publickey)
 
-#### 思路
+
+### 参考
+1. [由于SSH配置文件的不匹配，导致的Permission denied (publickey)及其解决方法 ](http://blog.itpub.net/25851087/viewspace-1262468/) 
+2. [Github 访问时出现Permission denied (public key)](http://my.oschina.net/grnick/blog/201155) 
+3. [Git with SSH on Windows](http://stackoverflow.com/questions/2499331/git-with-ssh-on-windows) 
+4. [Git - Permission denied (publickey)](http://stackoverflow.com/questions/2643502/git-permission-denied-publickey) 
+
+
+
+### 思路
 1. 首先想到的是重新生产公钥和密钥，重新配置github 账号中的公钥，结果行不通
+
 2. 参考链接1 中，修改了IdentityFile 的值，还是没有起作用
+
 3. 通过参考链接2 中
   ``` Bash
   ssh -v git@github.com
@@ -117,7 +127,8 @@ fatal: Could not read from remote repository.
   可是我查看的 username/.ssh/ 目录下面有 id_rsa 并且公钥已经加入到github 中了,百思不得其解啊，突然想到 /.ssh/ 不是 username/.ssh/ 应该是ssh单独配置的，通过where ssh 命令查看，当前ssh 使用的git 安装的ssh, 到git 安装目录 ：C:\Program Files (x86)\Git 果然找到了.ssh/ 目录，里面有新生产的公钥和密钥，添加到github 中就可以了
 
 
-#### 学到的知识点
+
+### 知识点
 ``` Bash
 ssh-keygen -t rsa -C "sumaolin619@gmail.com"  // 生产ssh使用的公钥和私钥
 ssh -t git@github.com // 测试ssh 是否配置成功
@@ -126,14 +137,22 @@ where ssh // 查看当前的ssh 的路径
 ```
 
 
-## 4. hexo博客参考链接
 
-  1. [hexo你的博客](http://ibruce.info/2013/11/22/hexo-your-blog/) 博客的主题也挺喜欢的
+## 参考链接
+
+  1. [hexo你的博客](http://ibruce.info/2013/11/22/hexo-your-blog/)  **推荐** 
+
+     >  博客的主题也挺喜欢的
 
 
-## 20160325 更新
 
-### features
+
+
+## 后续更新
+
+### 20160325 
+
+#### features
   1. github & coding.net 一键同时部署（coding.net 通过webhook 自动部署)，国内国外区分访问
 
 
@@ -147,7 +166,7 @@ where ssh // 查看当前的ssh 的路径
 
       关于 deplay github & coding.net 的写法 ，国内国外区分访问
 
-## 20160328 更新
+### 20160328
 
   迁移到coding.net 后，对与国内的的线路一直无法访问，一直以为修改DNS服务商后 没有生效，所以等48小时后的今天访问，还是不生效，感觉是自己配置的问题了，由于先参考了[在 Coding 上搭建 Hexo 个人博客！](https://segmentfault.com/a/1190000002900848), 潜意识的 以为只能通过 coding.net 的 演示功能部署呢，今天找问题时候发现，coding.net 的 pages 功能，还可以免费绑定域名（演示平台需要会员才可以绑定域名），所以新建了个个人博客的项目，改_config.yml 直接部署到该项目，把cname 解析到sumaolin.coding.me 而不是 sumaolin.coding.io （演示功能用到的域名），几秒后可以访问了！
 
@@ -157,33 +176,33 @@ where ssh // 查看当前的ssh 的路径
 
   以后看资料要仔细了，自己的坑自己踩啊！另外pages 部署的时候不用 创建空白文件Staticfile 也可以！
 
-## 图片的使用 2016-05-06 14:31
-
-### 参考链接
-  
-#### 1. [使用Hexo创建十七蝉的日志 # 如何加入图片](http://blog.shiqichan.com/create-blog-with-hexo/)
-> 本地存储图片，将图片放在source/images目录下，然后
-``` html
-  ![Alt text](/images/name.jpg "Alt text");
-```
-![Alt text](/img/QQ截图20160403180630.jpg "测试，本地图片")
-
-#### 2. [使用七牛为Hexo存储图片](http://blog.shiqichan.com/use-qiniu-store-image-for-hexo/)
-
-从上文中找到了 相关的插件 [hexo-qiniu-sync](https://github.com/gyk001/hexo-qiniu-sync), 插件已经更新完善了，所以直接使用该插件了，参考了该插件的文档
-
-因为本域名没有备案，还要设置dns等
 
 
-#### 3. [Sublime Text 2 中怎样查找scope的名称](http://blog.csdn.net/pxzy/article/details/8490058)
+### 图片的使用
 
-使用过sublime plugin "MarkdownEditing" 快捷键 mdi, mdl, mdh1 挺方便的，不过不喜欢在预览模式下写，所以通过sublime-snippet直接 定义相应的快捷键，操作方法，参考 [使用 Sublime-snippet 来快速做前端页面](http://www.jianshu.com/p/219de00c8343), 遇到的问题是设置scole时候一直无法trigger ，原谅写错了，一直以为是这个scope 对应的sublime Syntax中的一样就可以了，查找了上面的链接，才发现too yong too simple 了，_
-_
- mardown 对应的scope 是 text.html.mardown _
-_
+ 2016-05-06 14:31
+
+#### 参考链接
+
+1. [使用Hexo创建十七蝉的日志 # 如何加入图片](http://blog.shiqichan.com/create-blog-with-hexo/)
+
+   >  本地存储图片，将图片放在source/images目录下，然后
+   >
+   > ```![Alt text](/img/QQ截图20160403180630.jpg "测试，本地图片")
+
+2. [使用七牛为Hexo存储图片](http://blog.shiqichan.com/use-qiniu-store-image-for-hexo/)
+
+   从上文中找到了 相关的插件 [hexo-qiniu-sync](https://github.com/gyk001/hexo-qiniu-sync), 插件已经更新完善了，所以直接使用该插件了，参考了该插件的文档
+
+   因为本域名没有备案，还要设置dns等
+
+3. [Sublime Text 2 中怎样查找scope的名称](http://blog.csdn.net/pxzy/article/details/8490058)
+
+   使用过sublime plugin "MarkdownEditing" 快捷键 mdi, mdl, mdh1 挺方便的，不过不喜欢在预览模式下写，所以通过sublime-snippet直接 定义相应的快捷键，操作方法，参考 [使用 Sublime-snippet 来快速做前端页面](http://www.jianshu.com/p/219de00c8343), 遇到的问题是设置scole时候一直无法trigger ，原谅写错了，一直以为是这个scope 对应的sublime Syntax中的一样就可以了，查找了上面的链接，才发现too yong too simple 了，mardown 对应的scope 是 text.html.mardown 
 
 
-## 2016-08-08 qiniu图库使用
+
+#### qiniu图库使用
 
 ``` bash
 λ hexo qiniu i
@@ -217,7 +236,7 @@ SyntaxError: Unexpected token a
 ```
 一直报错，全部是从 [hexo-qiniu-sync](https://github.com/gyk001/hexo-qiniu-sync) 中复制粘贴过来的，只是把七牛的秘钥文件单独出来了，没有找到原因
 
-## 2016-08-10
+### 2016-08-10
 
 继续前天的工作，想到了先把秘钥配置写到 _config.xml中测试了下是OK的，那么就是单独读取秘钥文件的时候不成功，可能的原因：
 
@@ -252,11 +271,12 @@ SyntaxError: Unexpected token a
 
 发现个美中不足的地方： [qiniu 中开启了防盗链白名单功能，所以本地hexo s时无法实时预览图片？](https://github.com/gyk001/hexo-qiniu-sync/issues/39) 期望有解决方法
 
-### 2016-08-12 根据作者的介绍使用 `offline:true`配置可以开启 本地调用功能的，并且更新到 V 1.4.5版本解决了软连的问题
+### 2016-08-12
 
+ 根据作者的介绍使用 `offline:true`配置可以开启 本地调用功能的，并且更新到 V 1.4.5版本解决了软连的问题
 
-## 2016-09-27
-=======
+### 2016-09-27
+
 更新的时候hexo v3.2.2 更新后 没有了hexo server 选项了，这也没法开启offline:true 验证了，hexo官方确认是个windows下的bug
 
 
@@ -353,17 +373,13 @@ Template render error: (unknown path) [Line 91, Column 2]
 
 {% qnimg 202326.png title:考辛斯 alt:考辛斯 %}
 
-#### 发现刚才测试的 考辛斯的图片并没有同步到七牛 ，并且 deploy 后连接还是原来的域名下的
+发现刚才测试的 考辛斯的图片并没有同步到七牛 ，并且 deploy 后连接还是原来的域名下的
 
-## 2017-05-13
+### 2017-05-13
 
  终于完成了这个 hexo-qiniu-sync  插件的调试，可以痛快的使用了
 
 下面在弄个自己的[hexo-theme](/2017/05/13/hexo-theme/)
 
-  1. 前几天测试过从新 `hexo init` 个新项目的话 是有 `hexo server` 命令并且能够运行的，看来是 hexo-qiniu-sync 插件出问题了。有时间修复下
-
-  2. 自动部署的问题 看到了个更简洁的: [手把手教你使用Travis CI自动部署你的Hexo博客到Github上](http://i.woblog.cn/2016/05/04/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E5%88%B0Github%E4%B8%8A/#more)<<<<<<< .mine
-
-=======
-
+1. 前几天测试过从新 `hexo init` 个新项目的话 是有 `hexo server` 命令并且能够运行的，看来是 hexo-qiniu-sync 插件出问题了。有时间修复下
+2. 自动部署的问题 看到了个更简洁的: [手把手教你使用Travis CI自动部署你的Hexo博客到Github上](http://i.woblog.cn/2016/05/04/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E5%88%B0Github%E4%B8%8A/#more) 

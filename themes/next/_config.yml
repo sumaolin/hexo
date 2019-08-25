@@ -28,7 +28,7 @@ menu_icons:
 favicon: ./favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo,next"
+keywords: "Hexo,sumaolin,f2e"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -53,7 +53,7 @@ highlight_theme: night blue
 
 
 # MathJax Support
-mathjax:
+# mathjax:
 
 
 # Schemes
@@ -89,29 +89,29 @@ auto_excerpt:
   length: 150
 
 # Use Lato font
-use_font_lato: true
+#use_font_lato: true
 
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
-  duoshuo_hotartical: true
-  #admin_nickname: ROOT
-duoshuo_share: true
+# duoshuo_info:
+#   ua_enable: true
+#   admin_enable: false
+#   user_id: 0
+#   duoshuo_hotartical: true
+#   #admin_nickname: ROOT
+# duoshuo_share: true
 baidu_analytics: 154101e86ea67b8b420e04051c6e0b2a
 google_analytics: UA-52231954-2
 
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
-facebook_sdk:
-  enable: false
-  app_id:       #<app_id>
-  fb_admin:     #<user_id>
-  like_button:  #true
-  webmaster:    #true
+# facebook_sdk:
+#   enable: false
+#   app_id:       #<app_id>
+#   fb_admin:     #<user_id>
+#   like_button:  #true
+#   webmaster:    #true
 
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS

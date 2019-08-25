@@ -2,7 +2,7 @@
 title: web storage api
 date: 2016-02-24 10:14:24
 tags: [F2E, sessionStorage, localStorage, web storage api]
-categories: F2E
+categories: [F2E]
 ---
 项目中想加入 webStorage 减小网络开销，提高加载速度，增强用户体验，想系统的看下 web storage方面的文章！
 <!-- more -->
@@ -16,6 +16,7 @@ categories: F2E
   1. [HTML5 localStorage本地存储实际应用举例](http://www.zhangxinxu.com/wordpress/2011/09/html5-localstorage%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B/)
 
   2. [localStorage、sessionStorage用法总结](http://adamed.iteye.com/blog/1698740)
+
     >不同浏览器无法共享localStorage或sessionStorage中的信息。相同浏览器的不同页面间可以共享相同的localStorage（页面属于相同域名和端口），但是不同页面或标签页间无法共享sessionStorage的信息。这里需要注意的是，页面及标签页仅指顶级窗口，如果一个标签页包含多个iframe标签且他们属于同源页面，那么他们之间是可以共享sessionStorage的。
 
   3. [本博客零散优化点汇总](https://imququ.com/post/summary-of-my-blog-optimization.html)

@@ -2,11 +2,11 @@
 title: readList
 date: 2016-05-06 14:39:43
 tags: [F2E, 前端, 笔记]
-categories: [F2E]
+categories: [ReadList]
 ---
 
 五月份 工作中遇到问题汇总
- 
+
 <!-- more -->
 
 
@@ -17,7 +17,8 @@ categories: [F2E]
 
 ### 1. [介绍两个移动端使用的WebKit私有属性-webkit-touch-callout和-webkit-tap-highlight-color](http://www.css88.com/archives/5393)
   > `-webkit-touch-callout` 当你触摸并按住触摸目标时候，禁止或显示系统默认菜单
-  > `-webkit-tap-highlight-color` 当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。
+  >
+  > > `-webkit-tap-highlight-color` 当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。
 
 
 ## 2016-05-09 18:38

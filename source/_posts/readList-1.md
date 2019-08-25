@@ -2,7 +2,7 @@
 title: readList
 date: 2016-04-05 14:39:43
 tags: [F2E, 前端, 笔记]
-categories: [F2E]
+categories: [ReadList]
 ---
 
 平时好文章 搜集
@@ -106,9 +106,9 @@ _
 
 
       > WakaTime可以做到精确地统计到你花在某个项目上的时间;WakaTime针对不同的IDE，拥有不同的插件，在Sublime上安装着插件，就能统计到我使用Sublime进行的所有项目的行为。可以高效管理和知晓自己code时间
-
+    
       sublime & vsCode 都安装了WakaTime 插件了！
-
+    
     3. _
 _
  定制属于自己的快捷键 _
@@ -116,9 +116,9 @@ _
 
 
       > 设置快捷键。在SublimeText里，打开Preferences -> Key Bindings - User，设置的快捷键。
-
+    
       这样结合1 就可以 快捷运行当前的node 文件了
-
+    
     4. _
 _
  [编写自己的Sublime Text2 插件](http://www.bluesdream.com/blog/write-your-own-sublime-text2-plug.html) _

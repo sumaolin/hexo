@@ -17,12 +17,13 @@
     "hexo-generator-index": "^0.2.0",
     "hexo-generator-sitemap": "^1.1.2",
     "hexo-generator-tag": "^0.2.0",
-    "hexo-inject": "^1.0.0",
     "hexo-math": "^3.0.3",
-    "hexo-qiniu-sync": "^1.4.7",
     "hexo-renderer-ejs": "^0.3.1",
     "hexo-renderer-marked": "^0.2.9",
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.2.2"
+  },
+  "devDependencies": {
+    "hexo-inject": "^1.0.0"
   }
 }

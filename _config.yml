@@ -62,35 +62,33 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-plugins: 
+plugins:
 # - hexo-qiniu-sync
-qiniu:
-  offline: true
-  sync: true
-  bucket: sumaolin
-  # access_key: hpuB89Wsfc2l8zgx-6A5-P5xI-l0cYWE19KpPdX-
-  # secret_key: Hd1XwcNuwwNsN0ADxjGrIDk6INcY_EEuMUXMBzvb
-  secret_file: ./sec/qn.json
-  dirPrefix: static
-  urlPrefix: http://sumaolin.reekly.com/static
-  up_host: http://upload.qiniu.com
-  local_dir: static
-  update_exist: true
-  image: 
-    folder: img
-    extend: 
-  js:
-    folder: js
-  css:
-    folder: css
-
+# qiniu:
+#   offline: true
+#   sync: true
+#   bucket: sumaolin
+#   # access_key: hpuB89Wsfc2l8zgx-6A5-P5xI-l0cYWE19KpPdX-
+#   # secret_key: Hd1XwcNuwwNsN0ADxjGrIDk6INcY_EEuMUXMBzvb
+#   secret_file: ./sec/qn.json
+#   dirPrefix: static
+#   urlPrefix: http://sumaolin.reekly.com/static
+#   up_host: http://upload.qiniu.com
+#   local_dir: static
+#   update_exist: true
+#   image:
+#     folder: img
+#     extend:
+#   js:
+#     folder: js
+#   css:
+#     folder: css
 
 ## Themes: https://hexo.io/themes/
 theme: next
 avatar: http://tp4.sinaimg.cn/1765384767/180/5749265416/1
 # duoshuo_shortname: sumaolin
 baidu_analytics: 154101e86ea67b8b420e04051c6e0b2a
-
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -99,7 +97,6 @@ deploy:
   repo:
     github: git@github.com:sumaolin/sumaolin.github.com.git,master
     coding: git@git.coding.net:sumaolin/sumaolin.git,coding-pages
-
 
 server:
   port: 4000

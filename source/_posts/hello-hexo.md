@@ -6,7 +6,7 @@ categories: node
 ---
 
 
-一直想弄个自己的博客 记录下自己的技术方面的点点滴滴（更好的装B)
+一直想弄个自己的博客 记录下自己的技术方面的点点滴滴
 
 新年第一天上班，正好看到hexo 可以借助github.com 构建自己的静态博客，正好可以折腾下！
 
@@ -50,7 +50,7 @@ categories: node
 
 ### 主题安装 themes
 
-喜欢的主题 [hexo-theme-next](https://github.com/iissnan/hexo-theme-next)，使用文档很详细：[文档地址](http://theme-next.iissnan.com/),不废话了！
+喜欢的主题 [hexo-theme-next](https://github.com/iissnan/hexo-theme-next) ，使用文档很详细：[文档地址](http://theme-next.iissnan.com/) ，不废话了！
 
 喜欢的主题列表
 1. [hexo-theme-modernist](https://github.com/heroicyang/hexo-theme-modernist) 
@@ -58,15 +58,15 @@ categories: node
 
 #### 评论
 
-[多说](http://duoshuo.com/) 
+[多说](http://duoshuo.com/)  服务停掉了，想法使用 gittalk 或者 gitment
 
 #### 统计
 
-[百度统计](http://sitecenter.baidu.com/sc-web/) 
+[百度统计](http://sitecenter.baidu.com/sc-web/) ，现在换掉了，改成了Google analyst
 
 #### 搜索
 
-[Swiftype](https://swiftype.com/) 
+[Swiftype](https://swiftype.com/) 并没使用上
 
 #### 文章摘要
 
@@ -86,7 +86,7 @@ categories: node
 
 部署上去 无法访问，我是在git的根目录下有新建了个blog 目录，因为原来的git 下有东西了
 
-怀疑是自己的git root 下面已经有东西了，在子目录blog 下影响的，把git remote 改为新的地址：git@github.com:sumaolin/hexo.git
+怀疑是自己的git root 下面已经有东西了，在子目录blog 下影响的，把git remote 改为新的地址：`git@github.com:sumaolin/hexo.git` 
 
 可是hexo deploy 还是报错
 
@@ -117,14 +117,14 @@ fatal: Could not read from remote repository.
   ``` Bash
   ssh -v git@github.com
   ```
-  > 查看使用到的秘钥，可以看到有id_rsa，可是比起作用，为什么？
+  > 查看使用到的秘钥，可以看到有id_rsa，可是不起作用，为什么？
 
   ``` Bash
   ls /.ssh/ 查看目录下的私钥
   ```
   > 只有knowe_hosts
 
-  可是我查看的 username/.ssh/ 目录下面有 id_rsa 并且公钥已经加入到github 中了,百思不得其解啊，突然想到 /.ssh/ 不是 username/.ssh/ 应该是ssh单独配置的，通过where ssh 命令查看，当前ssh 使用的git 安装的ssh, 到git 安装目录 ：C:\Program Files (x86)\Git 果然找到了.ssh/ 目录，里面有新生产的公钥和密钥，添加到github 中就可以了
+  可是我查看的 username/.ssh/ 目录下面有 id_rsa 并且公钥已经加入到github 中了,百思不得其解啊，突然想到 /.ssh/ 不是 username/.ssh/ 应该是ssh单独配置的，通过`where ssh` 命令查看，当前ssh 使用的git 安装的ssh, 到git 安装目录 ：`C:\Program Files (x86)\Git` 果然找到了`.ssh/` 目录，里面有新生产的公钥和密钥，添加到github 中就可以了
 
 
 
@@ -150,11 +150,8 @@ where ssh // 查看当前的ssh 的路径
 
 ## 后续更新
 
-### 20160325 
-
-#### features
+### github & coding 同时部署
   1. github & coding.net 一键同时部署（coding.net 通过webhook 自动部署)，国内国外区分访问
-
 
 #### 参考链接
 
@@ -166,9 +163,9 @@ where ssh // 查看当前的ssh 的路径
 
       关于 deplay github & coding.net 的写法 ，国内国外区分访问
 
-### 20160328
+#### 思路
 
-  迁移到coding.net 后，对与国内的的线路一直无法访问，一直以为修改DNS服务商后 没有生效，所以等48小时后的今天访问，还是不生效，感觉是自己配置的问题了，由于先参考了[在 Coding 上搭建 Hexo 个人博客！](https://segmentfault.com/a/1190000002900848), 潜意识的 以为只能通过 coding.net 的 演示功能部署呢，今天找问题时候发现，coding.net 的 pages 功能，还可以免费绑定域名（演示平台需要会员才可以绑定域名），所以新建了个个人博客的项目，改_config.yml 直接部署到该项目，把cname 解析到sumaolin.coding.me 而不是 sumaolin.coding.io （演示功能用到的域名），几秒后可以访问了！
+迁移到coding.net 后，对与国内的的线路一直无法访问，一直以为修改DNS服务商后 没有生效，所以等48小时后的今天访问，还是不生效，感觉是自己配置的问题了，由于先参考了[在 Coding 上搭建 Hexo 个人博客！](https://segmentfault.com/a/1190000002900848), 潜意识的 以为只能通过 coding.net 的 演示功能部署呢，今天找问题时候发现，coding.net 的 pages 功能，还可以免费绑定域名（演示平台需要会员才可以绑定域名），所以新建了个个人博客的项目，改_config.yml 直接部署到该项目，把cname 解析到sumaolin.coding.me 而不是 sumaolin.coding.io （演示功能用到的域名），几秒后可以访问了！
 
   其实 [hexo干货系列：（四）将hexo博客同时托管到github和coding](http://www.jianshu.com/p/7ad9d3cd4d6e) 提到过 coding.net 两种部署方式的：
 
@@ -180,15 +177,15 @@ where ssh // 查看当前的ssh 的路径
 
 ### 图片的使用
 
- 2016-05-06 14:31
-
 #### 参考链接
 
 1. [使用Hexo创建十七蝉的日志 # 如何加入图片](http://blog.shiqichan.com/create-blog-with-hexo/)
 
    >  本地存储图片，将图片放在source/images目录下，然后
    >
-   > ```![Alt text](/img/QQ截图20160403180630.jpg "测试，本地图片")
+   >  ```![Alt text](/img/QQ截图20160403180630.jpg "测试，本地图片")
+   >  
+   >  ```
 
 2. [使用七牛为Hexo存储图片](http://blog.shiqichan.com/use-qiniu-store-image-for-hexo/)
 
@@ -236,7 +233,7 @@ SyntaxError: Unexpected token a
 ```
 一直报错，全部是从 [hexo-qiniu-sync](https://github.com/gyk001/hexo-qiniu-sync) 中复制粘贴过来的，只是把七牛的秘钥文件单独出来了，没有找到原因
 
-### 2016-08-10
+#### 2016-08-10
 
 继续前天的工作，想到了先把秘钥配置写到 _config.xml中测试了下是OK的，那么就是单独读取秘钥文件的时候不成功，可能的原因：
 
@@ -271,16 +268,16 @@ SyntaxError: Unexpected token a
 
 发现个美中不足的地方： [qiniu 中开启了防盗链白名单功能，所以本地hexo s时无法实时预览图片？](https://github.com/gyk001/hexo-qiniu-sync/issues/39) 期望有解决方法
 
-### 2016-08-12
+#### 2016-08-12
 
  根据作者的介绍使用 `offline:true`配置可以开启 本地调用功能的，并且更新到 V 1.4.5版本解决了软连的问题
 
-### 2016-09-27
+#### 2016-09-27
 
 更新的时候hexo v3.2.2 更新后 没有了hexo server 选项了，这也没法开启offline:true 验证了，hexo官方确认是个windows下的bug
 
 
-### 2016-12-21
+#### 2016-12-21
 
 有时间了，再折腾下上次遗留的问题： `hexo-qiniu-sync插件配置好后 hexo server 无法启动了`
 
@@ -375,11 +372,14 @@ Template render error: (unknown path) [Line 91, Column 2]
 
 发现刚才测试的 考辛斯的图片并没有同步到七牛 ，并且 deploy 后连接还是原来的域名下的
 
-### 2017-05-13
+#### 2017-05-13
 
  终于完成了这个 hexo-qiniu-sync  插件的调试，可以痛快的使用了
 
 下面在弄个自己的[hexo-theme](/2017/05/13/hexo-theme/)
 
 1. 前几天测试过从新 `hexo init` 个新项目的话 是有 `hexo server` 命令并且能够运行的，看来是 hexo-qiniu-sync 插件出问题了。有时间修复下
-2. 自动部署的问题 看到了个更简洁的: [手把手教你使用Travis CI自动部署你的Hexo博客到Github上](http://i.woblog.cn/2016/05/04/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8Travis%20CI%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84Hexo%E5%8D%9A%E5%AE%A2%E5%88%B0Github%E4%B8%8A/#more) 
+   2. 自动部署的问题 看到了个更简洁的: [手把手教你使用Travis CI自动部署你的Hexo博客到Github上](https://www.jianshu.com/p/e22c13d85659) 
+
+
+

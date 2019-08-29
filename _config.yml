@@ -5,9 +5,9 @@
 # Site
 title: 苏茂林
 subtitle: Kevin.Su's Blog
-description: 苏茂林, 个人博客, Kevin.Su's Blog, 关于前端技术的的杂记！
+description: 苏茂林, 个人博客, Kevin.Su's Blog, 关于前端技术！
 author: Kevin Su
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -34,14 +34,14 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace:
+  enable: false
+  # line_number: true
+  # auto_detect: false
+  # tab_replace:
 
 # Category & Tag
 default_category: uncategorized
@@ -85,10 +85,44 @@ plugins:
 #     folder: css
 
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: indigo-plus
 avatar: http://tp4.sinaimg.cn/1765384767/180/5749265416/1
 # duoshuo_shortname: sumaolin
 baidu_analytics: 154101e86ea67b8b420e04051c6e0b2a
+# Hexo recommended posts
+recommended_posts:
+  server: https://api.truelaurel.com #后端推荐服务器地址
+  timeoutInMillis: 15000 #服务时长，超过此时长，则使用离线推荐模式
+  internalLinks: 3 #内部文章数量
+  externalLinks: 2 #外部文章数量
+  fixedNumber: false
+  autoDisplay: true #自动在文章底部显示推荐文章
+  excludePattern: []
+  titleHtml: <strong>🚩推荐阅读</strong>（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动） #自定义标题
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ""
+  per_page: 10
+  order_by:
+    top: -1
+    date: -1
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+# Baidu URL Submit
+baidu_url_submit:
+  count: 1000 ## 提交最新的一个链接
+  host: sumaolin.com ## 在百度站长平台中注册的域名
+  token: pzUVzcOvuLSaEauU ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -97,6 +131,7 @@ deploy:
   repo:
     github: git@github.com:sumaolin/sumaolin.github.com.git,master
     coding: git@git.coding.net:sumaolin/sumaolin.git,coding-pages
+  # type: baidu_url_submitter
 
 server:
   port: 4000

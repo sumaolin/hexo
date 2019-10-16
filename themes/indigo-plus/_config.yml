@@ -119,11 +119,11 @@ gitment: false
 #   client_secret:
 
 # 是否使用 Gitalk，https://github.com/gitalk/gitalk
-gitalk: true
-  owner:sumaolin
-  repo:sumaolin.github.com
-  client_id:5ab6d961fa632da0dfa5
-  client_secret:27a8bcd3e86af92a96b8ca00f4ffaa95c80b53de
+gitalk:
+  owner: sumaolin
+  repo: sumaolin.github.com
+  client_id: 5ab6d961fa632da0dfa5
+  client_secret: 27a8bcd3e86af92a96b8ca00f4ffaa95c80b53de
 
 # Valine Comment system. https://valine.js.org
 valine:

@@ -87,7 +87,7 @@ cnzz: false
 baidu_tongji: false
 baidu_site_verification: false
 # 百度自动推送，如要开启，设置为 true
-baidu_push: false
+baidu_push: true
 
 # 腾讯分析，如要开启，输入站点id
 tajs: false
@@ -119,11 +119,11 @@ gitment: false
 #   client_secret:
 
 # 是否使用 Gitalk，https://github.com/gitalk/gitalk
-gitalk: false
-#  owner:
-#  repo:
-#  client_id:
-#  client_secret:
+gitalk: true
+owner: sumaolin
+repo: sumaolin.github.com
+client_id: 5ab6d961fa632da0dfa5
+client_secret: 27a8bcd3e86af92a96b8ca00f4ffaa95c80b53de
 
 # Valine Comment system. https://valine.js.org
 valine:
@@ -157,7 +157,7 @@ canonical: false
 since_year: 2018
 
 # 用户页面中作者相关的描述性文字，如不需要设为 false
-about: 用户页面中作者相关的描述性文字，如不需要设为 false
+about: 北漂的前端工程师，努力做个好全栈！
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:

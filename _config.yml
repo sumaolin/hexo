@@ -98,7 +98,7 @@ recommended_posts:
   fixedNumber: false
   autoDisplay: true #自动在文章底部显示推荐文章
   excludePattern: []
-  titleHtml: <strong>🚩推荐阅读</strong>（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动） #自定义标题
+  titleHtml: <h2 id="recommand-post"><strong>推荐阅读</strong>（由<a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a>驱动）</h2> #自定义标题
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -120,7 +120,7 @@ baidusitemap:
 # Baidu URL Submit
 baidu_url_submit:
   count: 1000 ## 提交最新的一个链接
-  host: sumaolin.com ## 在百度站长平台中注册的域名
+  host: www.sumaolin.com ## 在百度站长平台中注册的域名
   token: pzUVzcOvuLSaEauU ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
 

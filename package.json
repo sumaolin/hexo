@@ -1,13 +1,13 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "sumaolin.com",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
-    "version": "3.2.2"
+    "version": "3.9.0"
   },
   "dependencies": {
-    "hexo": "^3.1.1",
-    "hexo-asset-image": "^1.0.0",
+    "hexo": "^3.9.0",
+    "hexo-asset-image": "0.0.3",
     "hexo-baidu-url-submit": "0.0.6",
     "hexo-deployer-git": "^0.3.1",
     "hexo-deployer-heroku": "^0.1.2",
@@ -28,7 +28,9 @@
     "hexo-renderer-kramed": "^0.1.4",
     "hexo-renderer-less": "^1.0.0",
     "hexo-renderer-stylus": "^0.3.0",
-    "hexo-server": "^0.2.2"
+    "hexo-server": "^0.2.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.0.2",

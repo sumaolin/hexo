@@ -67,6 +67,24 @@ categories: node
 
 
 
+### 2019.10.30
+
+选择了Gittalk，在 [hexo-theme-material-indigo](https://github.com/yscoder/hexo-theme-indigo) 的 [wiki](https://github.com/yscoder/hexo-theme-indigo/wiki/%E5%AE%89%E8%A3%85) 中有gittalk 的 [配置](https://github.com/yscoder/hexo-theme-indigo/wiki/%E9%85%8D%E7%BD%AE)，本来是想改主题代码呢，看代码有相关的配置，就修改了 主题下`_config.yml`  下面的评论配置就可以了，"集成了 [disqus](https://disqus.com/)、[友言](http://www.uyan.cc/)、[gitment](https://github.com/imsun/gitment) 和 [valine](https://valine.js.org/)，开启其一即可"
+
+
+
+使用 [hexo-theme-indigo-plus](https://github.com/abelsu7/hexo-theme-indigo-plus) 主题时候，配置了`baidu_url_submitter` 但是一直报错，今天也解决掉了，是对YML 语法的不了解导致的，其中的数组是用 `-`  开头的，所以一直报错，得看下 [YAML 语言教程](http://www.ruanyifeng.com/blog/2016/07/yaml.html) 的提高下
+
+
+
+还有个不影响运行，但是一直提示的错误：`Error: Cannot find module './build/Release/DTraceProviderBindings'`  ，重新安装了hexo `npm install hexo --no-optional`  解决了，搜索到的参考：[Hexo常见问题解决方案](https://xuanwo.io/2014/08/14/hexo-usual-problem/) 
+
+
+
+折腾了好久，感觉blog 也没啥有营养的资料，现在整体想要的功能都有了，主要是评论，后面暂时放弃 PWA 的优化，和主题定制（也没头绪想要定制成什么样子），暂时放一放 hexo 的折腾，专注下blog 内容了
+
+
+
 ## PWA
 
 > 渐进式应用(Progressive Web Apps，PWA)是Google提出的新一代Web应用概念，其目的是提供可靠、快速、接近Native应用的服务方案。

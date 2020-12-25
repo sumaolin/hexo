@@ -130,8 +130,6 @@ deploy:
   - type: git
     repo:
       github: git@github.com:sumaolin/sumaolin.github.com.git,master
-      coding: git@git.coding.net:sumaolin/sumaolin.git,coding-pages
-  - type: baidu_url_submitter
 
 server:
   port: 4000

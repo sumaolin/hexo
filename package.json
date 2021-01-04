@@ -23,6 +23,7 @@
     "hexo-generator-tag": "^0.2.0",
     "hexo-helper-qrcode": "^1.0.2",
     "hexo-math": "^3.0.3",
+    "hexo-offline": "^1.0.0",
     "hexo-recommended-posts": "^1.1.0",
     "hexo-renderer-ejs": "^0.3.1",
     "hexo-renderer-kramed": "^0.1.4",

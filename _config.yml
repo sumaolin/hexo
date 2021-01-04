@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://sumaolin.com/
+url: https://sumaolin.com/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -124,6 +124,21 @@ baidu_url_submit:
   token: pzUVzcOvuLSaEauU ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
 
+# Offline
+## Config passed to sw-precache
+## https://github.com/JLHwung/hexo-offline
+offline:
+  maximumFileSizeToCacheInBytes: 10485760
+  staticFileGlobs:
+    - public/**/*.{js,html,css,png,jpg,jpeg,gif,svg,json,xml}
+  stripPrefix: public
+  verbose: true
+  runtimeCaching:
+    # CDNs - should be cacheFirst, since they should be used specific versions so should not change
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: cdnjs.cloudflare.com
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

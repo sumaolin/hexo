@@ -31,7 +31,10 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
@@ -127,18 +130,18 @@ baidu_url_submit:
 # Offline
 ## Config passed to sw-precache
 ## https://github.com/JLHwung/hexo-offline
-offline:
-  maximumFileSizeToCacheInBytes: 10485760
-  staticFileGlobs:
-    - public/**/*.{js,html,css,png,jpg,jpeg,gif,svg,json,xml}
-  stripPrefix: public
-  verbose: true
-  runtimeCaching:
-    # CDNs - should be cacheFirst, since they should be used specific versions so should not change
-    - urlPattern: /*
-      handler: cacheFirst
-      options:
-        origin: cdnjs.cloudflare.com
+# offline:
+#   maximumFileSizeToCacheInBytes: 10485760
+#   staticFileGlobs:
+#     - public/**/*.{js,html,css,png,jpg,jpeg,gif,svg,json,xml}
+#   stripPrefix: public
+#   verbose: true
+#   runtimeCaching:
+#     # CDNs - should be cacheFirst, since they should be used specific versions so should not change
+#     - urlPattern: /*
+#       handler: cacheFirst
+#       options:
+#         origin: cdnjs.cloudflare.com
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

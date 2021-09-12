@@ -9,7 +9,6 @@
     "node": ">=10.1.0"
   },
   "dependencies": {
-    "hexo": "^5.4.0",
     "hexo-asset-image": "1.0.0",
     "hexo-baidu-url-submit": "0.0.6",
     "hexo-deployer-git": "^3.0.0",
@@ -29,8 +28,10 @@
     "hexo-offline": "^2.0.0",
     "hexo-recommended-posts": "^1.2.0",
     "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-jade": "^0.5.0",
     "hexo-renderer-kramed": "^0.1.4",
     "hexo-renderer-less": "^2.0.2",
+    "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
     "lodash": "^4.17.21",
     "request": "^2.88.0",

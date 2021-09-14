@@ -91,17 +91,17 @@ plugins:
 theme: paper
 avatar: http://tp4.sinaimg.cn/1765384767/180/5749265416/1
 # duoshuo_shortname: sumaolin
-baidu_analytics: 154101e86ea67b8b420e04051c6e0b2a
+# baidu_analytics: 154101e86ea67b8b420e04051c6e0b2a
 # Hexo recommended posts
-recommended_posts:
-  server: https://api.truelaurel.com #后端推荐服务器地址
-  timeoutInMillis: 15000 #服务时长，超过此时长，则使用离线推荐模式
-  internalLinks: 3 #内部文章数量
-  externalLinks: 2 #外部文章数量
-  fixedNumber: false
-  autoDisplay: true #自动在文章底部显示推荐文章
-  excludePattern: []
-  titleHtml: <h2 id="recommand-post">推荐阅读</h2><p class='recommand-tip'>由 <a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a> 驱动</p> #自定义标题
+# recommended_posts:
+#   server: https://api.truelaurel.com #后端推荐服务器地址
+#   timeoutInMillis: 15000 #服务时长，超过此时长，则使用离线推荐模式
+#   internalLinks: 3 #内部文章数量
+#   externalLinks: 2 #外部文章数量
+#   fixedNumber: false
+#   autoDisplay: true #自动在文章底部显示推荐文章
+#   excludePattern: []
+#   titleHtml: <h2 id="recommand-post">推荐阅读</h2><p class='recommand-tip'>由 <a href="https://github.com/huiwang/hexo-recommended-posts">hexo文章推荐插件</a> 驱动</p> #自定义标题
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -121,13 +121,14 @@ baidusitemap:
   path: baidusitemap.xml
 
 # Baidu URL Submit
-baidu_url_submit:
-  count: 1000 ## 提交最新的一个链接
-  host: www.sumaolin.com ## 在百度站长平台中注册的域名
-  token: pzUVzcOvuLSaEauU ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
-  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+# # baidu_url_submit:
+#   count: 1000 ## 提交最新的一个链接
+#   host: www.sumaolin.com ## 在百度站长平台中注册的域名
+#   token: pzUVzcOvuLSaEauU ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+#   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
 
-# Offline
+# Offli
+ne
 ## Config passed to sw-precache
 ## https://github.com/JLHwung/hexo-offline
 # offline:

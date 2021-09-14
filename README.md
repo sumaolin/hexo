@@ -7,15 +7,11 @@
 1. `hexo s` 启动服务
 2. `hexo new post-name` 新建文章
 
-
-
-
-
 node : v 16.6.2
 
 当前 npm 版本信息
 
-````bash
+```bash
 ├── cz-conventional-changelog@3.3.0
 ├── hexo-asset-image@1.0.0
 ├── hexo-baidu-url-submit@0.0.6
@@ -45,4 +41,23 @@ node : v 16.6.2
 ├── lodash@4.17.21
 ├── request-promise@4.2.6
 └── request@2.88.2
-````
+```
+
+
+
+
+
+`hexo d` 报错：
+
+```bash
+FATAL {
+  err: [Error: ENOTSUP: operation not supported on socket, copyfile '/Users/kevinsu/devCode/hexo/public/assets' -> '/Users/kevinsu/devCode/hexo/.deploy_git/assets'] {
+    errno: -45,
+    code: 'ENOTSUP',
+    syscall: 'copyfile',
+    path: '/Users/kevinsu/devCode/hexo/public/assets',
+    dest: '/Users/kevinsu/devCode/hexo/.deploy_git/assets'
+  }
+} Something's wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html
+INFO  Generated manifests for 148 files. Total size: 6,172,231 bytes.
+```

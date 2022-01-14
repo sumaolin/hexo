@@ -1,7 +1,3 @@
-# 整个文件的生产过程可以参考
-
-## [hello-hexo](http://sumaolin.com/2016/02/17/hello-hexo/), 记录了折腾整个 hexo 的过程
-
 ## 常用命令行
 
 1. `hexo s` 启动服务
@@ -9,7 +5,9 @@
 
 node : v 16.6.2
 
-当前 npm 版本信息
+依赖通过 yarn 安装 否则会报错
+
+当前 package 版本信息
 
 ```bash
 ├── cz-conventional-changelog@3.3.0
@@ -47,17 +45,22 @@ node : v 16.6.2
 
 
 
-`hexo d` 报错：
+## Reference
 
-```bash
-FATAL {
-  err: [Error: ENOTSUP: operation not supported on socket, copyfile '/Users/kevinsu/devCode/hexo/public/assets' -> '/Users/kevinsu/devCode/hexo/.deploy_git/assets'] {
-    errno: -45,
-    code: 'ENOTSUP',
-    syscall: 'copyfile',
-    path: '/Users/kevinsu/devCode/hexo/public/assets',
-    dest: '/Users/kevinsu/devCode/hexo/.deploy_git/assets'
-  }
-} Something's wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html
-INFO  Generated manifests for 148 files. Total size: 6,172,231 bytes.
-```
+### 部署生成
+
+1. [hello-hexo](http://sumaolin.com/2016/02/17/hello-hexo/), 记录了折腾整个 hexo 的过程
+
+
+
+### bug修复
+
+1. [解决Hexo在 Node.js 14 下出现的 Accessing non-existent property 'xxx' of module exports inside circular dependency 问题 | GSGUNDAM砍柴工](https://gsgundam.com/2021-10-29-hexo-nodejs14-accessing-non-existent-property-issue/) 
+
+   > ```json
+   > "resolutions": {
+   >   "stylus": "^0.54.8"
+   > }
+   > ```
+
+   所以需要yarn 管理package

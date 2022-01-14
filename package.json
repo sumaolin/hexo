@@ -6,7 +6,7 @@
     "version": "5.4.0"
   },
   "engines": {
-    "node": ">=10.1.0"
+    "node": ">=16.6.2"
   },
   "dependencies": {
     "hexo": "^5.4.0",

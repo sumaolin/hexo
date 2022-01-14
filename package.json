@@ -37,6 +37,9 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
+  "resolutions": {
+    "stylus": "^0.54.8"
+  },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
     "hexo-inject": "^1.0.0"

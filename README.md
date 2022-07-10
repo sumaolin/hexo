@@ -1,3 +1,11 @@
+# sumaolin.com
+
+## 开发
+
+1.  `git clone git@github.com:sumaolin/hexo.git`
+2.  `git submodule init`
+3.  `git submodule update` 通过 git 子模块同步 themes/paper 主题
+
 ## 常用命令行
 
 1. `hexo s` 启动服务
@@ -41,21 +49,15 @@ node : v 16.6.2
 └── request@2.88.2
 ```
 
-
-
-
-
 ## Reference
 
 ### 部署生成
 
 1. [hello-hexo](http://sumaolin.com/2016/02/17/hello-hexo/), 记录了折腾整个 hexo 的过程
 
+### bug 修复
 
-
-### bug修复
-
-1. [解决Hexo在 Node.js 14 下出现的 Accessing non-existent property 'xxx' of module exports inside circular dependency 问题 | GSGUNDAM砍柴工](https://gsgundam.com/2021-10-29-hexo-nodejs14-accessing-non-existent-property-issue/) 
+1. [解决 Hexo 在 Node.js 14 下出现的 Accessing non-existent property 'xxx' of module exports inside circular dependency 问题 | GSGUNDAM 砍柴工](https://gsgundam.com/2021-10-29-hexo-nodejs14-accessing-non-existent-property-issue/)
 
    > ```json
    > "resolutions": {
@@ -63,4 +65,4 @@ node : v 16.6.2
    > }
    > ```
 
-   所以需要yarn 管理package
+   所以需要 yarn 管理 package

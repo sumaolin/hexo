@@ -2,9 +2,9 @@
 
 ## 开发
 
-1.  `git clone git@github.com:sumaolin/hexo.git`
-2.  `git submodule init`
-3.  `git submodule update` 通过 git 子模块同步 themes/paper 主题
+1. `git clone git@github.com:sumaolin/hexo.git`
+2. `git submodule init`
+3. `git submodule update` 通过 git 子模块同步 themes/paper 主题
 
 ## 常用命令行
 
